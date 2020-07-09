@@ -1,0 +1,13 @@
+html, body {
+  max-width: 1000px;
+  margin: auto;
+  color: red;
+}
+
+li{
+  list-style-type: none;
+}
+
+h2{
+  color: green;  
+}
