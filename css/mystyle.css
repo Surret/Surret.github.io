@@ -16,14 +16,14 @@ ul{
 }
 li{
   list-style-type: none;
-  margin: 0 2vw;
-  font-size: 3vw;
+  margin: 0 0.5vw;
+  font-size: 2vw;
 
 }
 a {
   text-decoration: none;
   color:black;
-  padding: 2vw;
+  padding: 0 2vw;
   font-family: monospace;
 }
 
@@ -59,12 +59,12 @@ button {
   button{
     display:block;
     padding: 2vw;
-    font-size:3vh;
+    font-size:3vw;
     background-color: #AFE0FF;
     border:none;
     outline:none;
     cursor:pointer;
     align-self: flex-start;
-    
+
   }
 }
