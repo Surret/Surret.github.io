@@ -1,14 +1,18 @@
+*{  border: 2px solid navy;}
+
 html, body {
   max-width: 1000px;
   margin: 0;
   color: red;
   text-decoration: none;
   height:100%;
+  font-family: monospace;
+  background:#D6EFFF
 
 }
 .top{
   width:100vw;
-  padding: 100px;
+  padding: 80px;
   background-color: #D6EFFF;
 }
 nav{
@@ -28,7 +32,6 @@ li{
   list-style-type: none;
   margin: 0 0.5vw;
   font-size: 2vw;
-
 }
 a {
   text-decoration: none;
@@ -39,28 +42,39 @@ a {
 
 a:hover {
   background-color: #c6e9ff;
-  padding:0 2vw;
+  padding:1.5vw 2vw;
 }
 
 h1 {
   font-size: 40px;
   color:green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%
+}
+
+section{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 h2{
-  color: green;
+  color:green;
 }
 
 button {
   display: none;
 }
 
-section{
+
+
+/*section{
   display: flex;
   align-items: center;
   justify-content: center;
   height: 20%;
-}
+}*/
 @media only screen and (max-width: 500px){
 
   ul{
