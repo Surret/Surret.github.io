@@ -97,12 +97,36 @@ a {
   grid-template-areas:
     "top top top"
     "nav nav nav"
+    "first first first"
+    "second third forth"
+    "foot foot foot"
+}
+.wrapper2 {
+  display:grid;
+  margin:auto;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "top top top"
+    "nav nav nav"
     "jason first first"
     "second third forth"
     "foot foot foot"
 }
 @media only screen and (max-width: 794px){
  .wrapper{
+   font-size: auto;
+   grid-template-columns: 1fr;
+   grid-template-areas:
+   "top"
+   "nav"
+   "first"
+   "second"
+   "third"
+   "forth"
+   "foot"
+ }
+ .wrapper2{
    font-size: auto;
    grid-template-columns: 1fr;
    grid-template-areas:
