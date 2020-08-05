@@ -28,7 +28,7 @@ ul{
 li{
   list-style-type: none;
   margin: 0 0.5vw;
-  font-size: auto;
+  font-size: 16px;
 }
 a {
   text-decoration: none;
@@ -51,10 +51,21 @@ a {
   text-align: center;
   padding: 20px;
   margin: auto;
-
 }
 .second,.third,.forth{
   margin:0 10px;
+}
+#footer{
+  margin: auto;
+}
+.Jason{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.image{
+  margin:auto;
+  grid-area: jason;
 }
 .top{
   grid-area: top;
@@ -74,6 +85,9 @@ a {
 .forth{
   grid-area: forth;
 }
+.foot{
+  grid-area: foot;
+}
 
 .wrapper {
   display:grid;
@@ -83,11 +97,13 @@ a {
   grid-template-areas:
     "top top top"
     "nav nav nav"
-    "first first first"
+    "jason first first"
     "second third forth"
+    "foot foot foot"
 }
 @media only screen and (max-width: 794px){
  .wrapper{
+   font-size: auto;
    grid-template-columns: 1fr;
    grid-template-areas:
    "top"
@@ -96,5 +112,6 @@ a {
    "second"
    "third"
    "forth"
+   "foot"
  }
 }
