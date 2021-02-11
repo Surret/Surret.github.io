@@ -1,49 +1,68 @@
 /**{  border: 2px solid navy;}*/
 
-html, body {
-  width: auto;
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --btn-color: #ccc;
+}
+
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --btn-color: #ccc;
+}
+
+html,
+body {
   max-width: 1000px;
   margin-right: auto;
   margin-left: auto;
-  color: black;
-  height:100%;
+  color: var(--primary-color);
+  height: 100%;
   font-family: monospace;
-  background:#fff;
+  background: var(--secondary-color);
   justify-content: center;
+  transition: all 0.5s ease-in;
 }
-nav{
-  margin:auto;
+
+/*Navigation*/
+nav {
+  margin: auto;
   max-width: 1000px;
+  width: 80vw;
   height: 40px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--primary-color);
+  transition: all 0.5s ease-in;
 }
-ul{
+ul {
   margin: 0;
-  padding:0;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
 }
-li{
+li {
   list-style-type: none;
   margin: 0 0.5vw;
-  font-size: 16px;
+  font-size: 20px;
 }
-a {
+.nav {
   text-decoration: none;
-  color:black;
+  color: var(--primary-color);
   padding: 0 2vw;
   font-family: monospace;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s ease-in;
 }
-.first h1{
+/* Main Page*/
+.first h1 {
   font-size: 40px;
   text-align: center;
-  padding:30px;
-  margin:50px;
+  padding: 30px;
+  margin: 50px;
 }
 
 .first p {
@@ -52,90 +71,170 @@ a {
   padding: 20px;
   margin: auto;
 }
-.second,.third,.forth{
-  margin:0 10px;
+.second,
+.third,
+.forth {
+  margin: 0 10px;
 }
-#footer{
+#footer {
   margin: auto;
 }
-.Jason{
+/*About me*/
+.Jason {
   height: 200px;
   width: 200px;
   border-radius: 50%;
 }
-.image{
-  margin:auto;
+/*blog*/
+
+.content {
+  font-size: 16px;
+}
+.side_text {
+  font-size: 18px;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.5s ease-in;
+}
+.social {
+  display: flex;
+  justify-content: center;
+}
+.twitter {
+  height: 30px;
+  width: 30px;
+  padding: 20px;
+}
+.github {
+  height: 30px;
+  width: 30px;
+  padding: 20px;
+}
+.outside-button {
+  display: flex;
+  position: relative;
+  justify-content: right;
+  align-items: center;
+}
+.btn {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 25px;
+  margin: 20px;
+  background-color: var(--btn-color);
+  color: #000;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.5s ease-in;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Grid Area */
+.image {
+  margin: auto;
   grid-area: jason;
 }
-.top{
-  grid-area: top;
-}
-.nav{
+nav {
   grid-area: nav;
 }
-.first{
+.first {
   grid-area: first;
 }
-.second{
+.second {
   grid-area: second;
 }
-.third{
+.third {
   grid-area: third;
 }
-.forth{
+.forth {
   grid-area: forth;
 }
-.foot{
+.foot {
   grid-area: foot;
+}
+.content {
+  grid-area: blog;
+}
+.side_info {
+  grid-area: side;
 }
 
 .wrapper {
-  display:grid;
-  margin:auto;
+  display: grid;
+  margin: auto;
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-    "top top top"
     "nav nav nav"
     "first first first"
     "second third forth"
-    "foot foot foot"
+    "foot foot foot";
 }
 .wrapper2 {
-  display:grid;
-  margin:auto;
+  display: grid;
+  margin: auto;
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-    "top top top"
     "nav nav nav"
     "jason first first"
     "second third forth"
-    "foot foot foot"
+    "foot foot foot";
 }
-@media only screen and (max-width: 794px){
- .wrapper{
-   font-size: auto;
-   grid-template-columns: 1fr;
-   grid-template-areas:
-   "top"
-   "nav"
-   "first"
-   "second"
-   "third"
-   "forth"
-   "foot"
- }
- .wrapper2{
-   font-size: auto;
-   grid-template-columns: 1fr;
-   grid-template-areas:
-   "top"
-   "nav"
-   "first"
-   "second"
-   "third"
-   "forth"
-   "foot"
- }
+
+.blog-wrapper {
+  display: grid;
+  margin: auto;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "nav nav nav"
+    "side blog blog"
+    "foot foot foot";
+}
+@media only screen and (max-width: 794px) {
+  .wrapper {
+    font-size: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav"
+      "first"
+      "second"
+      "third"
+      "forth"
+      "foot";
+  }
+  .wrapper2 {
+    font-size: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav"
+      "Jason"
+      "first"
+      "second"
+      "third"
+      "forth"
+      "foot";
+  }
+  .blog_wrapper {
+    margin: 20px;
+    font-size: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav"
+      "side"
+      "blog"
+      "foot";
+  }
 }
