@@ -59,6 +59,20 @@ li {
   justify-content: center;
   transition: all 0.5s ease-in;
 }
+
+.chapter {
+  text-decoration: none;
+  color: var(--primary-color);
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+  display: flex;
+  line-height: 4px;
+}
+
+.chapter:last-child {
+  padding: 0 0 20px 0;
+}
 /* Main Page*/
 .first h1 {
   font-size: 40px;
@@ -165,6 +179,24 @@ li {
 
 .next {
   float: right;
+}
+
+/*Project Page*/
+
+.project {
+  text-align: center;
+  justify-content: center;
+}
+
+.design {
+  display: inline-block;
+  height: 100px;
+  width: 200px;
+  border: black solid 1px;
+  border-radius: 10px;
+  box-shadow: 3px 3px black;
+  margin: 10px;
+  font-size: 10px;
 }
 
 /* Grid Area */
