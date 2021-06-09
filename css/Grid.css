@@ -1,13 +1,13 @@
 :root {
-  --primary-color: #000;
+  --primary-color: #444;
   --secondary-color: #fff;
-  --btn-color: #ccc;
+  --btn-color: #fff;
 }
 
 html.dark {
   --primary-color: #fff;
-  --secondary-color: #000;
-  --btn-color: #ccc;
+  --secondary-color: #444;
+  --btn-color: #000;
 }
 
 body {
@@ -127,6 +127,7 @@ li {
   width: 30px;
   padding: 20px;
 }
+
 .outside-button {
   display: flex;
   position: relative;
@@ -144,7 +145,7 @@ li {
   margin: 20px;
   background-color: var(--btn-color);
   color: #000;
-  border: none;
+  border: 2px solid black;
   border-radius: 50px;
   transition: all 0.5s ease-in;
 }
@@ -164,9 +165,9 @@ li {
   justify-content: center;
   align-items: center;
   border-radius: 25px;
-  border: none;
+  border: 2px solid black;
   list-style-type: none;
-  background-color: #aaa;
+  background-color: #fff;
   color: black;
   width: 80px;
   height: 30px;
