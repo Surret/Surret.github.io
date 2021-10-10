@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap");
+
+:root {
+  --anim: transform 0.5s;
+  --rotate: rotate(-45deg);
+}
+
+* {
+  background-color: #dc143c;
+}
+
+h1 {
+  color: white;
+  font-family: "Love Ya Like A Sister", cursive;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 30vh;
+}
+
+.center {
+  text-align: center;
+}
+
+.heart {
+  background-color: white;
+  display: inline-block;
+  height: 120px;
+  width: 120px;
+  margin: 0 40px;
+  position: relative;
+  top: 0;
+  transform: var(--rotate);
+  transition: var(--anim);
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: white;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  transition: var(--anim);
+}
+
+.heart:before {
+  top: -60px;
+  left: 0;
+  transition: var(--anim);
+}
+
+.heart:after {
+  left: 60px;
+  top: 0;
+  transition: var(--anim);
+}
+
+.heart:hover {
+  animation: pulse 500ms infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: var(--rotate) scale(1);
+  }
+  50% {
+    transform: var(--rotate) scale(1.2);
+  }
+  100% {
+    transform: var(--rotate) scale(1);
+  }
+}
