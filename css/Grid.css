@@ -24,7 +24,7 @@ body {
   font-family: monospace;
   background: var(--secondary-color);
   justify-content: center;
-  transition: all 0.5s ease-in;
+
 }
 
 /*Navigation*/
@@ -34,9 +34,9 @@ nav {
   width: 80vw;
   height: 40px;
   border-bottom: 1px solid var(--primary-color);
-  transition: all 0.5s ease-in;
+
 }
-ul {
+nav ul {
   margin: 0;
   padding: 0;
   display: flex;
@@ -44,7 +44,7 @@ ul {
   justify-content: center;
   height: 100%;
 }
-li {
+nav ul li {
   list-style-type: none;
   margin: 0 0.5vw;
   font-size: 20px;
@@ -57,7 +57,6 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.5s ease-in;
 }
 
 .chapter {
@@ -111,7 +110,6 @@ li {
   font-size: 18px;
   color: var(--primary-color);
   text-decoration: none;
-  transition: all 0.5s ease-in;
 }
 .social {
   display: flex;
@@ -147,7 +145,6 @@ li {
   color: #000;
   border: 2px solid black;
   border-radius: 50px;
-  transition: all 0.5s ease-in;
 }
 
 .btn:focus {
@@ -200,8 +197,60 @@ li {
   font-size: 10px;
 }
 
+/* Resources Page */
+
+.description{
+  text-align: center;
+  font-size: 1.5rem ;
+}
+.free,
+.paid,
+.youtube,
+.reddit,
+.full,
+.radio{
+  margin:1rem;
+  text-align: center;
+}
+
+.free ul,
+.paid ul,
+.youtube ul,
+.reddit ul,
+.full ul,
+.radio ul{
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.free ul li,
+.paid ul li,
+.youtube ul li,
+.reddit ul li,
+.full ul li,
+.radio ul li{
+  margin:1rem;
+  padding:0;
+  font-size: 1.4rem;
+  list-style-type: none;
+  text-align:center;
+}
+.free ul li a,
+.paid ul li a,
+.youtube ul li a,
+.reddit ul li a,
+.full ul li a,
+.radio ul li a{
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+
 /* Grid Area */
-.image {
+.Jason {
   margin: auto;
   grid-area: jason;
 }
@@ -231,6 +280,27 @@ nav {
 }
 .prev-btn .next-btn {
   grid-area: btn;
+}
+.description{
+  grid-area:description;
+}
+.free{
+  grid-area:free;
+}
+.paid{
+  grid-area:paid;
+}
+.youtube{
+  grid-area:youtube;
+}
+.reddit{
+  grid-area:reddit;
+}
+.full{
+  grid-area:full;
+}
+.radio{
+  grid-area:radio;
 }
 
 .wrapper {
@@ -267,6 +337,19 @@ nav {
     "btn blog blog"
     "foot foot foot";
 }
+
+.resources-wrapper {
+  display: grid;
+  margin: auto;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "nav nav nav"
+  "description description description"
+  "free paid youtube"
+  "full radio reddit"
+  "foot foot foot";
+}
 @media only screen and (max-width: 794px) {
   .wrapper {
     font-size: auto;
@@ -279,12 +362,11 @@ nav {
       "forth"
       "foot";
   }
-  .wrapper2 {
+  .about-wrapper {
     font-size: auto;
     grid-template-columns: 1fr;
     grid-template-areas:
       "nav"
-      "Jason"
       "first"
       "second"
       "third"
@@ -300,5 +382,24 @@ nav {
       "side"
       "blog"
       "foot";
+  }
+  .Jason{
+    display:none;
+  }
+  .resources-wrapper {
+    display: grid;
+    margin: auto;
+    grid-gap: 20px;
+    grid-template-columns: 1fr ;
+    grid-template-areas:
+    "nav"
+    "description"
+    "free"
+    "paid"
+    "youtube"
+    "full"
+    "radio"
+    "reddit"
+    "foot";
   }
 }

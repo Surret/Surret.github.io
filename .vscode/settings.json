@@ -1,4 +1,11 @@
 {
   "liveServer.settings.port": 5501,
-  "cSpell.ignoreWords": ["surrettun"]
+  "cSpell.ignoreWords": [
+    "surrettun"
+  ],
+  "cSpell.words": [
+    "Bootcamp",
+    "Schwarzmüller",
+    "Traversy"
+  ]
 }
