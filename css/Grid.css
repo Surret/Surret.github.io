@@ -97,9 +97,13 @@ nav ul li {
 }
 /*About me*/
 .Jason {
+  padding: 5rem;
+  margin: 5rem;
   height: 200px;
   width: 200px;
   border-radius: 50%;
+  justify-content: center;
+  align-items: center;
 }
 /*blog*/
 
@@ -177,6 +181,16 @@ nav ul li {
 
 .next {
   float: right;
+}
+
+/*Blog Images*/
+
+.stand{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  max-height: 80%;
 }
 
 /*Project Page*/
