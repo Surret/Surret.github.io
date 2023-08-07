@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap'); 
+
+:root{
+    --primary-color:#242F9B;
+    --secondary-color:#646FD4;
+    --another-color:#9BA3EB;
+    --more-colors:#DBDFFD;
+}
+
+html,
+body {
+  margin-right: auto;
+  margin-left: auto;
+  color: var(--primary-color);
+  height: 110%;
+  font-family: "Jost";
+  font-size:1.25rem;
+  background: var(--more-colors);
+  justify-content: center;
+}
+
+/*Navigation*/
+nav {
+    margin: auto;
+    margin-top: -10px;
+    height: 80px;
+    background:var(--another-color);
+ }
+  nav ul {
+    margin: 0;
+    margin-right: 1rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 100%;
+  }
+  nav ul li {
+    list-style-type: none;
+    margin: 0 0.5vw;
+    font-size: 1.25rem;
+  }
+  .nav {
+    text-decoration: none;
+    color: var(--primary-color);
+    padding:0 0.2vw;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+/*Index page*/
+
+.first h1 {
+  color:var(--secondary-color)
+}
+
+.first,
+.second,
+.third,
+.forth {
+  margin:auto;
+  max-width: 62.5rem;
+  justify-content: center;
+}
