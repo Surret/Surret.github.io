@@ -1,0 +1,62 @@
+<!-- Navigation Bar -->
+<header class="bg-white border-b border-gray-200 sticky top-0 z-10 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-3">
+        <div class="flex items-center justify-between h-12">
+            
+            <!-- Logo/Name (Always Visible, Shifts Left on Mobile) -->
+            <div class="flex-shrink-0">
+                <a href="index.html" class="text-xl font-bold text-gray-900 whitespace-nowrap">
+                    Jason Smith | <span class="text-blue-600">Product Design</span>
+                </a>
+            </div>
+
+            <!-- Desktop Menu (Visible on md and up) -->
+            <nav class="hidden md:ml-6 md:flex md:space-x-8">
+                <a href="index.html#projects" class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md font-medium transition-colors">
+                    Projects
+                </a>
+                <a href="index.html#about" class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md font-medium transition-colors">
+                    About
+                </a>
+                <a href="index.html#contact" class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md font-medium transition-colors">
+                    Contact
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button (Visible only on mobile) -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" type="button" 
+                        class="text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 p-2 rounded-md transition-colors"
+                        aria-expanded="false" 
+                        aria-controls="mobile-nav-menu">
+                    
+                    <!-- Icon for closed state (Hamburger) -->
+                    <svg id="icon-menu-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    
+                    <!-- Icon for open state (X/Close) -->
+                    <svg id="icon-menu-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Container (Initially Hidden) -->
+    <div id="mobile-nav-menu" class="md:hidden hidden border-t border-gray-100">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="index.html#projects" class="block text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md px-3 py-2 font-medium transition-colors">
+                Projects
+            </a>
+            <a href="index.html#about" class="block text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md px-3 py-2 font-medium transition-colors">
+                About
+            </a>
+            <a href="index.html#contact" class="block text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md px-3 py-2 font-medium transition-colors">
+                Contact
+            </a>
+        </div>
+    </div>
+</header>
+<!-- End Navigation Bar -->
