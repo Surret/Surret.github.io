@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://surret.github.io/bowl-carrier-system.html">
+    <meta property="og:title" content="Jason Smith | Hybrid Structural Bowl &amp; Carrier System">
+    <meta property="og:description" content="A single-handed hybrid carrier system combining a central steel load core with 3D-printed parametric dovetail interlocks to transport bowls and drinks through gated partitions.">
+    <meta property="og:url" content="https://surret.github.io/bowl-carrier.html">
+    <meta property="og:image" content="https://surret.github.io/img/Site-images/og-image.png">
+    <meta property="og:type" content="webpage">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image"> 
+    <meta name="twitter:title" content="Jason Smith | Hybrid Structural Bowl &amp; Carrier System">
+    <meta name="twitter:description" content="A single-handed hybrid carrier system combining a central steel load core with 3D-printed parametric dovetail interlocks to transport bowls and drinks through gated partitions.">
+    <meta name="twitter:image" content="https://surret.github.io/img/Site-images/og-image.png">
+    <!-- Updated Favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="shortcut icon" type="image/png" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2"> 
+    <title>Hybrid Structural Bowl &amp; Carrier System | Jason Smith Product Design</title>
+    <meta name="description" content="Case study on a one-handed hybrid carrier system utilizing a central steel load core, sliding mechanical dovetail joints in Fusion 360, and FDM 3D printing.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #f3f4f6;
+        }
+        .nav-link:hover {
+            color: #22d3ee;
+        }
+        /* Fixed Watermark Background (No Scroll Motion Illusion) */
+        .projects-bg {
+            background-color: #121212;
+            position: relative;
+            z-index: 1;
+        }
+        .projects-bg::before {
+            content: "";
+            position: fixed; /* Locks pattern to screen so it stays dead stationary on scroll */
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-image: url('img/Site-images/Surrettun-Station-Socials-Logo.png');
+            background-repeat: repeat;
+            background-size: 140px auto; /* Scaled up tile size to eliminate dense grid vibration */
+            background-position: center;
+            transform: rotate(-25deg);
+            transform-origin: center center;
+            opacity: 0.15; /* Softened contrast to prevent eye strain */
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="antialiased bg-[#121212] text-slate-100">
+
+<div id="navbar-placeholder"></div>
+
+    <!-- Project Details Section -->
+    <section class="py-12 md:py-20 projects-bg min-h-screen">
+        <!-- Soft Paper-Tone Card (No harsh glare, no concrete grey) -->
+        <div class="container mx-auto px-6 max-w-4xl bg-zinc-100 border border-zinc-300 rounded-2xl shadow-2xl p-8 md:p-12 text-zinc-800">
+            
+            <!-- Back to Portfolio Button (Top) -->
+            <a href="index.html" class="inline-flex items-center bg-slate-900 hover:bg-slate-800 text-cyan-400 font-semibold py-2 px-4 rounded-full transition-colors duration-200 mb-8 border border-slate-700 shadow-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Back to Portfolio
+            </a>
+            
+            <!-- Project Title & Description -->
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4 text-zinc-900">
+                Hybrid Structural Bowl &amp; Carrier System
+            </h1>
+            <p class="text-zinc-600 text-lg mb-8 leading-relaxed">
+                Designing a true one-handed hybrid carrier combining a central steel load core with parametric 3D-printed sliding dovetail interlocks to navigate gated partitions safely.
+            </p>
+
+            <!-- Image Gallery (Matched inner background to eliminate white lines) -->
+            <div class="flex flex-col md:flex-row gap-8 mb-10 items-center md:items-start">
+                <div class="w-full md:w-3/4 h-[24rem] md:h-[28rem] relative overflow-hidden rounded-xl border border-zinc-300 bg-zinc-200/50 shadow-inner">
+                    <img id="main-image" src="img/bowl-holder/Bowl_holder_final.jpg" alt="Hybrid Structural Bowl and Carrier System full assembly" class="w-full h-full object-contain">
+                </div>
+                
+                <!-- Thumbnails container -->
+                <div id="thumbnail-container" class="flex-none flex md:flex-col gap-4 overflow-x-auto md:overflow-y-auto w-full md:w-auto p-2">
+                    <img src="img/bowl-holder/Bowl_holder1.jpg" alt="3D printed mechanical dovetail joint detail" class="thumbnail w-24 h-24 rounded-lg border-2 border-zinc-300 hover:border-cyan-500 shadow-sm cursor-pointer transition-transform transform hover:scale-105 object-cover flex-shrink-0">
+                </div>
+            </div>
+
+            <!-- Project Description Content -->
+            <div class="space-y-6 text-zinc-700 leading-relaxed text-base md:text-lg">
+                <p>
+                    The client required a specialised, single-handed carrier system capable of transporting two bowls and two drinks simultaneously while navigating a gated partition. The engineering needed to accommodate two crucial constraints: keeping one hand entirely free to operate physical gate latches, and managing dynamic liquid/solid load balance without tipping or structural deflection.
+                </p>
+
+                <h3 class="text-center text-2xl font-bold mt-10 mb-4 text-zinc-900 border-b border-zinc-300 pb-2">
+                    Key Challenges &amp; Solutions
+                </h3>
+                <ul class="list-disc list-inside space-y-4">
+                    <li>
+                        <strong class="text-zinc-900">Hybrid Structural Framework:</strong> To bypass the tensile limitations of standalone 3D-printed plastics under sustained cantilever loads, I engineered a hybrid assembly. A central steel pole was integrated to handle primary vertical load-bearing forces, shifting mechanical stress away from the printed components.
+                    </li>
+                    <li>
+                        <strong class="text-zinc-900">Mechanical Dovetail Interlocks:</strong> To secure the bowl-retaining rings to the central hub without relying on weak chemical adhesives, I designed custom sliding Dovetail Joints in Fusion 360. This mechanical joint distributes shear stress across the physical geometry of the printed plastic layers, creating a highly rigid, reliable lock.
+                    </li>
+                    <li>
+                        <strong class="text-zinc-900">Modularity &amp; Ergonomics:</strong> The interface components were parametrically modelled, ensuring the design remains fully modular. The entire system was built for rapid assembly, teardown, and scaling to suit varying container diameters in the future.
+                    </li>
+                </ul>
+                
+                <h3 class="text-center text-2xl font-bold mt-10 mb-4 text-zinc-900 border-b border-zinc-300 pb-2">
+                    Personal Learning
+                </h3>
+                <ul class="list-disc list-inside space-y-4">
+                    <li>
+                        <strong class="text-zinc-900">Load Isolation in Hybrid Assemblies:</strong> Gained experience combining traditional metallic hardware with additive components to isolate mechanical stresses and overcome material tensile limitations.
+                    </li>
+                    <li>
+                        <strong class="text-zinc-900">Print-Toleranced Mechanical Joints:</strong> Refined clearance tolerances in Fusion 360 for sliding dovetails to achieve smooth assembly without loose play or layer shearing.
+                    </li>
+                </ul>
+
+                <h3 class="text-center text-2xl font-bold mt-10 mb-4 text-zinc-900 border-b border-zinc-300 pb-2">
+                    Tools &amp; Specifications
+                </h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><strong class="text-zinc-900">Design Platform:</strong> Fusion 360 (Parametric &amp; Tolerance Design)</li>
+                    <li><strong class="text-zinc-900">Manufacturing Process:</strong> FFF / FDM 3D Printing</li>
+                    <li><strong class="text-zinc-900">Material Selection:</strong> Premium PLA (Formulated as a high-strength skin over the internal skeleton)</li>
+                    <li><strong class="text-zinc-900">Joint Architecture:</strong> Slide-locking Mechanical Dovetails</li>
+                    <li><strong class="text-zinc-900">Hardware Integration:</strong> Heavy-duty central steel load core, dual screw-mounted cup-stabiliser rings</li>
+                </ul>
+
+                <h3 class="text-center text-2xl font-bold mt-10 mb-4 text-zinc-900 border-b border-zinc-300 pb-2">
+                    Final Deliverable
+                </h3>
+                <p>
+                    The completed four-point carrier system successfully transitioned from a conceptual prototype into a highly dependable, daily-use tool. Combining traditional metallic hardware with custom-sliced additive manufacturing allows the user to navigate secure gates confidently with zero deflection, zero load failure, and complete physical safety.
+                </p>
+            </div>
+            
+            <hr class="my-12 border-zinc-300">
+
+            <!-- Back to Portfolio Button (Bottom) -->
+            <div class="text-center mb-12">
+                <a href="index.html" class="inline-flex items-center bg-slate-900 hover:bg-slate-800 text-cyan-400 font-semibold py-2 px-4 rounded-full transition-colors duration-200 border border-slate-700 shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    Back to Portfolio
+                </a>
+            </div>
+
+            <!-- More Projects Section -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-zinc-900">
+                More Projects
+            </h2>
+            <div id="related-projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Related project cards dynamically inserted by project-controller.js -->
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="all-projects.html" class="inline-flex items-center bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 px-6 rounded-full border border-slate-700 hover:border-cyan-400 transition-colors duration-200 shadow-md">
+                    See More Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Back to Top Button -->
+    <a href="#" id="back-to-top" class="fixed bottom-4 right-4 bg-slate-800 border border-slate-700 text-cyan-400 p-3 rounded-full shadow-lg transition-opacity duration-300 opacity-0 z-50 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-900 text-slate-400 py-8 text-center">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2026 Jason Smith. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="scripts/card-shuffle.js"></script>
+    <script src="scripts/project-controller.js"></script>
+    <script src="scripts/global-utilities.js"></script> 
+    <script src="scripts/detail-gallery.js"></script> 
+</body>
+</html>

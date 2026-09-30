@@ -7,20 +7,21 @@
     <meta property="og:title" content="Jason Smith | Product Design">
     <meta property="og:description" content="Product designer and creator focused on 3D printing and the manufacturing process.">
     <meta property="og:url" content="https://surret.github.io/index.html">
-    <meta property="og:image" content="https://surret.github.io/img/Site-images/social-banner.png">
+    <meta property="og:image" content="https://surret.github.io/img/Site-images/og-image.png">
     <meta property="og:type" content="webpage">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image"> 
     <meta name="twitter:title" content="Jason Smith | Product Design">
     <meta name="twitter:description" content="Product designer and creator focused on 3D printing and the manufacturing process.">
-    <meta name="twitter:image" content="https://surret.github.io/img/Site-images/social-banner.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://surret.github.io/img/Site-images/favicon.png">
-    <link rel="icon" type="image/png" sizes="32x33" href="https://surret.github.io/img/Site-images/favicon.png">
-    <link rel="shortcut icon" type="image/png" href="https://surret.github.io/img/Site-images/favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://surret.github.io/img/Site-images/favicon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="https://surret.github.io/img/Site-images/favicon.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="https://surret.github.io/img/Site-images/favicon.png"> 
+    <meta name="twitter:image" content="https://surret.github.io/img/Site-images/og-image.png">
+    <!-- Updated Favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="shortcut icon" type="image/png" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">  
     <title>Jason Smith | Product Design</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,29 +30,56 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
-            color: #1f2937;
+            background-color: #121212;
+            color: #f3f4f6;
+            position: relative;
+            min-height: 100vh;
         }
+
+        /* Frozen Background Watermark (Locked to viewport) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: -50vh;
+            left: -50vw;
+            width: 200vw;
+            height: 200vh;
+            
+            /* Repeating Logo Grid */
+            background-image: url('img/Site-images/Surrettun-Station-Socials-Logo.png');
+            background-repeat: repeat;
+            background-size: 140px auto;
+            background-position: center;
+            
+            /* Rotation & Softened Contrast */
+            transform: rotate(-25deg);
+            transform-origin: center center;
+            opacity: 0.12; /* Slightly softened to reduce visual noise */
+            
+            /* Prevents scroll movement, layering bugs, and click blocking */
+            z-index: -10;
+            pointer-events: none;
+        }
+
         .nav-link:hover {
-            color: #1e88e5;
+            color: #22d3ee;
         }
+
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
         }
+
         .hero-bg {
-            /* Replace this URL with your hero image link */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/Steam-Lamp/steam_lamp1.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/Steam-Lamp/steam_lamp1.jpg');
             background-size: cover;
             background-position: center;
         }
-        .projects-bg {
-            background-color: #c0d9ec;
-            background-image: repeating-linear-gradient(45deg, #a7bed6 0, #a7bed6 1px, transparent 1px, transparent 10px);
-        }
-        .contact-bg {
-            background-color: #c0d9ec;
-            background-image: repeating-linear-gradient(45deg, #a7bed6 0, #a7bed6 1px, transparent 1px, transparent 10px);
+
+        /* Transparent section wrappers so fixed background shows through seamlessly */
+        .projects-bg, .contact-bg {
+            position: relative;
+            z-index: 1;
         }
     </style>
 </head>
@@ -60,60 +88,81 @@
 <div id="navbar-placeholder"></div>
 
     <!-- Hero Section -->
-    <section class="hero-bg py-20 md:py-32 flex items-center justify-center text-center">
-        <div class="container mx-auto px-6 text-white bg-black/20 backdrop-blur-sm rounded-xl py-8">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
-                Hi, I'm <span class="text-blue-400">Jason Smith</span>
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center relative overflow-hidden">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <!-- Glassmorphism Card Wrapper -->
+            <div class="bg-slate-900/70 backdrop-blur-md border border-slate-800 rounded-2xl p-8 md:p-12 shadow-2xl">
+                
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4 text-white">
+                Hi, I'm <span class="text-cyan-400">Jason Smith</span>
             </h1>
-            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">
-                A designer and creator focused on the art of 3D printing and the process behind it.
+
+            <!-- Integrated studio reference directly in the bio -->
+            <p class="text-slate-300 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
+                Electromechanical prototyping and parametric hardware design at <span class="text-white font-semibold">Surrettun Station</span>. Turning complex physical constraints into reliable, field-ready builds.
             </p>
-            <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-colors duration-300 shadow-lg">
-                View My Work
-            </a>
+                
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#projects" class="w-full sm:w-auto bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-bold py-3.5 px-8 rounded-full transition-all duration-200 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-500/20">
+                        View Engineering Builds
+                    </a>
+                    <a href="#about" class="w-full sm:w-auto bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-semibold py-3.5 px-8 rounded-full border border-slate-700 hover:border-cyan-400/50 transition-all duration-200">
+                        My Approach &amp; Process
+                    </a>
+                </div>
+
+            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects-bg py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">My Projects</h2>
+            <!-- Added text-white so the title pops against the dark tiled background -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+                My Projects
+            </h2>
+            
+            <!-- Dynamic card container -->
             <div id="featured-projects-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Project cards will be dynamically inserted here by project-controller.js -->
             </div>
-        </div>
-            <div class="text-center mt-8">
-                <a href="all-projects.html" class="inline-flex items-center bg-gray-800 text-white font-semibold py-3 px-6 rounded-full hover:bg-gray-700 transition-colors duration-200">
+
+            <!-- Moved inside the container for consistent max-width alignment -->
+            <div class="text-center mt-12">
+                <a href="all-projects.html" class="inline-flex items-center bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-6 rounded-full border border-slate-700 hover:border-cyan-400 transition-colors duration-200 shadow-md">
                     See More Projects
                 </a>
             </div>
+        </div>
     </section>
     
 
     <!-- About Section -->
     <section id="about" class="bg-gray-800 text-gray-200 py-20">
         <div class="container mx-auto px-6 max-w-3xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-white">My Philosophy & Process</h2>
-            <p class="text-lg text-center mb-8 font-semibold">
-                "I believe in using systems to empower people. My purpose is to create products and processes that are simple, clear, and functional. I believe that elegant design is not about what you add, but what you take away."
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-white">Engineering Approach & Process</h2>
+            <p class="text-lg text-center mb-8 font-semibold text-gray-300">
+                "I build practical, real-world solutions to mechanical and electrical challenges. Good engineering isn't about fluff—it's about structural integrity, functional tolerances, and reliable electronics."
             </p>
             <div class="space-y-8">
                 <div>
-                    <h3 class="text-2xl font-semibold mb-2 text-blue-400">1. Ideation & Planning</h3>
-                    <p class="text-sm">
-                        Every project begins with a simple idea. I start with sketching and digital modelling to define the scope and feasibility. This phase is crucial for identifying potential challenges early on.
+                    <h3 class="text-2xl font-semibold mb-2 text-blue-400">1. Problem Definition & CAD</h3>
+                    <p class="text-sm text-gray-300">
+                        Every project begins with a real-world constraint, from dynamic load paths to electrical timeouts. I translate physical measurements into precise, parametric 3D models in Fusion 360, designing for assembly and stress distribution from day one.
                     </p>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-semibold mb-2 text-blue-400">2. Prototyping & Iteration</h3>
-                    <p class="text-sm">
-                        I use 3D printing to quickly create physical prototypes. This allows for hands-on evaluation of the design, and I'm not afraid to make multiple versions until the form and function are perfect.
+                    <h3 class="text-2xl font-semibold mb-2 text-blue-400">2. Prototyping & Bench Testing</h3>
+                    <p class="text-sm text-gray-300">
+                        I move quickly from CAD to physical hardware using 3D printing and bench assembly. Prototypes are tested under actual operational conditions—evaluating timing loops, stress points, and mechanical fitments to catch flaws early.
                     </p>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-semibold mb-2 text-blue-400">3. Refinement & Finalisation</h3>
-                    <p class="text-sm">
-                        The final stage involves optimising the model for the best possible print quality and finishing the product. This includes post-processing techniques like sanding, painting, or assembly to bring the creation to life.
+                    <h3 class="text-2xl font-semibold mb-2 text-blue-400">3. DFM & Hardware Integration</h3>
+                    <p class="text-sm text-gray-300">
+                        The final iteration is optimised for long-term durability. This means refining print geometries, integrating strain relief, wiring solid-state electronics, and delivering hardware that works reliably in the field.
                     </p>
                 </div>
             </div>
@@ -123,14 +172,24 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-bg py-20">
         <div class="container mx-auto px-6 max-w-2xl text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8">Get In Touch</h2>
-            <p class="text-gray-600 mb-8">
+            <!-- Added text-white so the title doesn't vanish into the #121212 background -->
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white">Get In Touch</h2>
+            
+            <!-- Updated text-gray-600 to text-gray-300 for dark theme legibility -->
+            <p class="text-gray-300 mb-8">
                 Have a project idea or a job opportunity? I'd love to hear from you.
             </p>
-            <a href="mailto:jasonjohnsmith31@gmail.com" class="w-full inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300">
+            
+            <!-- Swapped email to surrettun@gmail.com and removed w-full so button doesn't stretch full width -->
+            <a href="mailto:surrettun@gmail.com" class="inline-flex items-center justify-center bg-slate-900 hover:bg-slate-800 text-cyan-400 font-semibold py-3.5 px-8 rounded-xl border border-slate-700 shadow-md transition-all duration-300 hover:shadow-cyan-500/10 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
                 Send a Message
             </a>
-            <p class="text-sm text-gray-500 mt-4">
+            
+            <!-- Muted gray text adjusted for dark mode contrast -->
+            <p class="text-sm text-gray-400 mt-4">
                 This will open your default email client.
             </p>
         </div>

@@ -7,22 +7,21 @@
     <meta property="og:title" content="Jason Smith | Product Design">
     <meta property="og:description" content="Product designer and creator focused on 3D printing and the manufacturing process.">
     <meta property="og:url" content="https://surret.github.io/engine-roof.html">
-    <meta property="og:image" content="https://surret.github.io/img/Site-images/social-banner.png">
+    <meta property="og:image" content="https://surret.github.io/img/Site-images/og-image.png">
     <meta property="og:type" content="webpage">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image"> 
     <meta name="twitter:title" content="Jason Smith | Product Design">
     <meta name="twitter:description" content="Product designer and creator focused on 3D printing and the manufacturing process.">
-    <meta name="twitter:image" content="https://surret.github.io/img/Site-images/social-banner.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://surret.github.io/img/Site-images/favicon.png">
-    <link rel="icon" type="image/png" sizes="32x33" href="https://surret.github.io/img/Site-images/favicon.png">
-    <link rel="shortcut icon" type="image/png" href="https://surret.github.io/img/Site-images/favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://surret.github.io/img/Site-images/favicon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="https://surret.github.io/img/Site-images/favicon.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="https://surret.github.io/img/Site-images/favicon.png"> 
-
-    <!-- Updated for SEO & Accessibility -->
+    <meta name="twitter:image" content="https://surret.github.io/img/Site-images/og-image.png">
+    <!-- Updated Favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="shortcut icon" type="image/png" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2"> 
     <title>The Engine Roof Project | Jason Smith Product Design</title>
     <meta name="description" content="A detailed look at my project to translate a roof design into CAD for a joiner and design a power bank holder.">
 
@@ -33,25 +32,48 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            color: #1f2937;
+            background-color: #121212;
+            color: #f3f4f6;
         }
         .nav-link:hover {
-            color: #1e88e5;
+            color: #22d3ee;
         }
+        /* Fixed Watermark Background (No Motion Illusion) */
         .projects-bg {
-            background-color: #c0d9ec;
-            background-image: repeating-linear-gradient(45deg, #a7bed6 0, #a7bed6 1px, transparent 1px, transparent 10px);
+            background-color: #121212;
+            position: relative;
+            z-index: 1;
+        }
+        .projects-bg::before {
+            content: "";
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-image: url('img/Site-images/Surrettun-Station-Socials-Logo.png');
+            background-repeat: repeat;
+            background-size: 140px auto;
+            background-position: center;
+            transform: rotate(-25deg);
+            transform-origin: center center;
+            opacity: 0.15;
+            z-index: -1;
+            pointer-events: none;
         }
     </style>
 </head>
 <body class="antialiased">
 
 <div id="navbar-placeholder"></div>
+
     <!-- Project Details Section -->
-    <section class="py-20 projects-bg">
-        <div class="container mx-auto px-6 max-w-4xl bg-white rounded-lg shadow-lg p-8 md:p-12">
+    <section class="py-12 md:py-20 projects-bg min-h-screen">
+        <!-- Soft Paper-Tone Content Card -->
+        <div class="container mx-auto px-6 max-w-4xl bg-zinc-100 border border-zinc-300 rounded-2xl shadow-2xl p-8 md:p-12 text-zinc-800">
+            
             <!-- Back to Portfolio Button (Top) -->
-            <a href="index.html" class="inline-flex items-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-full hover:bg-blue-700 transition-colors duration-200 mb-8">
+            <a href="index.html" class="inline-flex items-center bg-slate-900 hover:bg-slate-800 text-cyan-400 font-semibold py-2 px-4 rounded-full transition-colors duration-200 mb-8 border border-slate-700 shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                 </svg>
@@ -59,28 +81,27 @@
             </a>
             
             <!-- Project Title & Description -->
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">The Engine Roof Project</h1>
-            <p class="text-gray-600 mb-8">Translating an existing paper design into a precise CAD model for manufacturing and creating a custom power bank holder.</p>
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4 text-zinc-900">The Engine Roof Project</h1>
+            <p class="text-zinc-600 text-lg mb-8 leading-relaxed">Translating an existing paper design into a precise CAD model for manufacturing and creating a custom power bank holder.</p>
 
             <!-- Image Gallery -->
-            <div class="flex flex-col md:flex-row gap-8 mb-8 items-center md:items-start">
-                <div class="w-full md:w-3/4 h-[24rem] md:h-[28rem] relative overflow-hidden">
-                    <!-- This is the main project image. Replace the src with your image URL and remember to add descriptive alt text for accessibility. -->
-                    <img id="main-image" src="img/engine-roof/engine_roof4.jpg" alt="Main view of the 3D Printed Power Bank Holder on the Steam Engine Roof" class="w-full h-full rounded-lg shadow-lg object-contain">
+            <div class="flex flex-col md:flex-row gap-8 mb-10 items-center md:items-start">
+                <div class="w-full md:w-3/4 h-[24rem] md:h-[28rem] relative overflow-hidden rounded-xl border border-zinc-300 bg-zinc-200/50 shadow-inner">
+                    <img id="main-image" src="img/engine-roof/engine_roof4.jpg" alt="Main view of the 3D Printed Power Bank Holder on the Steam Engine Roof" class="w-full h-full object-contain">
                 </div>
                 
-                <!-- Thumbnails container with horizontal scrolling on mobile and vertical on desktop -->
+                <!-- Thumbnails container -->
                 <div id="thumbnail-container" class="flex-none flex md:flex-col gap-4 overflow-x-auto md:overflow-y-auto w-full md:w-auto p-2">
-                    <img src="img/engine-roof/engine_roof4.jpg" alt="Thumbnail 1" class="thumbnail w-24 h-24 rounded-lg shadow-md cursor-pointer transition-transform transform hover:scale-105 object-cover flex-shrink-0">
-                    <img src="img/engine-roof/engine_roof1.jpg" alt="Thumbnail 2" class="thumbnail w-24 h-24 rounded-lg shadow-md cursor-pointer transition-transform transform hover:scale-105 object-cover flex-shrink-0">
-                    <img src="img/engine-roof/engine_roof2.jpg" alt="Thumbnail 3" class="thumbnail w-24 h-24 rounded-lg shadow-md cursor-pointer transition-transform transform hover:scale-105 object-cover flex-shrink-0">
-                    <img src="img/engine-roof/engine_roof3.jpg" alt="Thumbnail 4" class="thumbnail w-24 h-24 rounded-lg shadow-md cursor-pointer transition-transform transform hover:scale-105 object-cover flex-shrink-0">
-                    <img src="img/engine-roof/engine_roof5.jpg" alt="Thumbnail 5" class="thumbnail w-24 h-24 rounded-lg shadow-md cursor-pointer transition-transform transform hover:scale-105 object-cover flex-shrink-0">
+                    <img src="img/engine-roof/engine_roof4.jpg" alt="Thumbnail 1" class="thumbnail w-24 h-24 rounded-lg border-2 border-zinc-300 hover:border-cyan-500 shadow-sm cursor-pointer transition-transform transform hover:scale-105 object-cover flex-shrink-0">
+                    <img src="img/engine-roof/engine_roof1.jpg" alt="Thumbnail 2" class="thumbnail w-24 h-24 rounded-lg border-2 border-zinc-300 hover:border-cyan-500 shadow-sm cursor-pointer transition-transform transform hover:scale-105 object-cover flex-shrink-0">
+                    <img src="img/engine-roof/engine_roof2.jpg" alt="Thumbnail 3" class="thumbnail w-24 h-24 rounded-lg border-2 border-zinc-300 hover:border-cyan-500 shadow-sm cursor-pointer transition-transform transform hover:scale-105 object-cover flex-shrink-0">
+                    <img src="img/engine-roof/engine_roof3.jpg" alt="Thumbnail 4" class="thumbnail w-24 h-24 rounded-lg border-2 border-zinc-300 hover:border-cyan-500 shadow-sm cursor-pointer transition-transform transform hover:scale-105 object-cover flex-shrink-0">
+                    <img src="img/engine-roof/engine_roof5.jpg" alt="Thumbnail 5" class="thumbnail w-24 h-24 rounded-lg border-2 border-zinc-300 hover:border-cyan-500 shadow-sm cursor-pointer transition-transform transform hover:scale-105 object-cover flex-shrink-0">
                 </div>
             </div>
 
             <!-- Project Description Content -->
-            <div class="prose max-w-none text-gray-800">
+            <div class="space-y-6 text-zinc-700 leading-relaxed text-base md:text-lg">
                 <p>
                     This project involved creating a new roof for the miniature steam engine. While the overall design and measurements were pre-existing on paper, my role was to translate these 2D drawings into a precise 3D CAD model. This digital model was essential to get the roof professionally built by a joiner. In addition, I designed a custom power bank holder that would seamlessly integrate with the new structure.
                 </p>
@@ -89,48 +110,47 @@
                     A key part of the project was the creation of a custom holder for a power bank. This component was designed to securely hold the power supply for the LEDs and was a crucial functional addition to the roof.
                 </p>
 
-                <h3 class="text-center text-2xl font-bold mt-4 mb-4">Key Challenges & Solutions</h3>
+                <h3 class="text-center text-2xl font-bold mt-10 mb-4 text-zinc-900 border-b border-zinc-300 pb-2">Key Challenges &amp; Solutions</h3>
                 <ul class="list-disc list-inside space-y-4">
                     <li>
-                        <strong>Translating 2D Drawings to CAD:</strong> The primary challenge was accurately converting detailed measurements from paper drawings into a precise 3D CAD model for a joiner to manufacture. This required careful attention to detail, especially when working with the limitations of the free version of the software, to ensure the final product would fit perfectly.
+                        <strong class="text-zinc-900">Translating 2D Drawings to CAD:</strong> The primary challenge was accurately converting detailed measurements from paper drawings into a precise 3D CAD model for a joiner to manufacture. This required careful attention to detail, especially when working with the limitations of software, to ensure the final product would fit perfectly.
                     </li>
                     <li>
-                        <strong>Designing a Custom Power Bank Holder:</strong> With the roof's dimensions set, I had to create a holder that would securely contain the power bank and fit into the final structure. This required careful design to ensure the holder was strong enough and had a clean, finished look.
+                        <strong class="text-zinc-900">Designing a Custom Power Bank Holder:</strong> With the roof's dimensions set, I had to create a holder that would securely contain the power bank and fit into the final structure. This required careful design to ensure the holder was strong enough and had a clean, finished look.
                     </li>
                 </ul>
                 
-                <h3 class="text-center text-2xl font-bold mt-4 mb-4">Personal Learning</h3>
+                <h3 class="text-center text-2xl font-bold mt-10 mb-4 text-zinc-900 border-b border-zinc-300 pb-2">Personal Learning</h3>
                 <ul class="list-disc list-inside space-y-4">
                     <li>
-                        <strong>Translating 2D to 3D for Manufacturing:</strong> I learned how to convert detailed 2D paper drawings into a precise 3D CAD format. This is a crucial skill for bridging the gap between traditional design methods and modern manufacturing processes, especially when working within the constraints of free software.
+                        <strong class="text-zinc-900">Translating 2D to 3D for Manufacturing:</strong> I learned how to convert detailed 2D paper drawings into a precise 3D CAD format. This is a crucial skill for bridging the gap between traditional design methods and modern manufacturing processes.
                     </li>
                     <li>
-                        <strong>Integrating Custom Components:</strong> This project taught me how to create a custom component—the power bank holder—that integrates seamlessly with a larger, pre-existing structure. It's a valuable lesson in designing for real-world constraints.
+                        <strong class="text-zinc-900">Integrating Custom Components:</strong> This project taught me how to create a custom component—the power bank holder—that integrates seamlessly with a larger, pre-existing structure. It's a valuable lesson in designing for real-world constraints.
                     </li>
                 </ul>
 
-                <h3 class="text-center text-2xl font-bold mt-4 mb-4">Tools & Technologies</h3>
-                <ul class="list-disc list-inside">
-                    <li><strong>3D Modelling:</strong> Fusion 360</li>
-                    <li><strong>3D Printer:</strong> Creality Ender 3 V2</li>
-                    <li><strong>Slicing Software:</strong> Cura</li>
-                    <li><strong>Materials:</strong> PLA Filament (Black)</li>
+                <h3 class="text-center text-2xl font-bold mt-10 mb-4 text-zinc-900 border-b border-zinc-300 pb-2">Tools &amp; Technologies</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><strong class="text-zinc-900">3D Modelling:</strong> Fusion 360</li>
+                    <li><strong class="text-zinc-900">3D Printer:</strong> Creality Ender 3 V2</li>
+                    <li><strong class="text-zinc-900">Slicing Software:</strong> Cura</li>
+                    <li><strong class="text-zinc-900">Materials:</strong> PLA Filament (Black)</li>
                 </ul>
 
-                <h3 class="text-center text-2xl font-bold mt-4 mb-4">Future Possibilities</h3>
+                <h3 class="text-center text-2xl font-bold mt-10 mb-4 text-zinc-900 border-b border-zinc-300 pb-2">Future Possibilities</h3>
                 <ul class="list-disc list-inside space-y-4">
                     <li>
-                        <strong>Integrating Electronics:</strong> A potential next step is to design a more integrated system for the electronics. The original intention was to add switches within the power bank holder to enable switching between two power banks and to be able to turn the lights on or off from the cab. While this was not implemented due to time constraints, it remains a potential future improvement. The current wiring is already concealed within grooves in the design, maintaining the aesthetic of a steam-powered engine. This could be further improved by creating a built-in charging port on the holder and a more permanent, integrated connection to the LEDs.
+                        <strong class="text-zinc-900">Integrating Electronics:</strong> A potential next step is to design a more integrated system for the electronics. The original intention was to add switches within the power bank holder to enable switching between two power banks and to be able to turn the lights on or off from the cab. While this was not implemented due to time constraints, it remains a potential future improvement. The current wiring is already concealed within grooves in the design, maintaining the aesthetic of a steam-powered engine. This could be further improved by creating a built-in charging port on the holder and a more permanent, integrated connection to the LEDs.
                     </li>
                 </ul>
-
             </div>
             
-            <hr class="my-12">
+            <hr class="my-12 border-zinc-300">
 
-            <!-- "Back to Portfolio" Button (Bottom) -->
+            <!-- Back to Portfolio Button (Bottom) -->
             <div class="text-center mb-12">
-                <a href="index.html" class="inline-flex items-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-full hover:bg-blue-700 transition-colors duration-200">
+                <a href="index.html" class="inline-flex items-center bg-slate-900 hover:bg-slate-800 text-cyan-400 font-semibold py-2 px-4 rounded-full transition-colors duration-200 border border-slate-700 shadow-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                     </svg>
@@ -139,13 +159,13 @@
             </div>
 
             <!-- More Projects Section -->
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">More Projects</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-zinc-900">More Projects</h2>
             <div id="related-projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Related project cards will be dynamically inserted here by project-controller.js -->
+                <!-- Related project cards dynamically inserted by project-controller.js -->
             </div>
-            <!-- The button is now correctly placed OUTSIDE the grid container for proper centering -->
+            
             <div class="text-center mt-8">
-                <a href="all-projects.html" class="inline-flex items-center bg-gray-800 text-white font-semibold py-3 px-6 rounded-full hover:bg-gray-700 transition-colors duration-200">
+                <a href="all-projects.html" class="inline-flex items-center bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 px-6 rounded-full border border-slate-700 hover:border-cyan-400 transition-colors duration-200 shadow-md">
                     See More Projects
                 </a>
             </div>
@@ -153,16 +173,16 @@
     </section>
 
     <!-- Floating "Back to Top" Button -->
-    <a href="#" id="back-to-top" class="fixed bottom-4 right-4 bg-gray-800 text-white p-3 rounded-full shadow-lg transition-opacity duration-300 opacity-0 z-50 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+    <a href="#" id="back-to-top" class="fixed bottom-4 right-4 bg-slate-800 text-cyan-400 border border-slate-700 p-3 rounded-full shadow-lg transition-opacity duration-300 opacity-0 z-50 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>
     </a>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8 text-center">
+    <footer class="bg-slate-950 text-slate-400 py-8 text-center border-t border-slate-800">
         <div class="container mx-auto px-6">
-            <p>&copy; 2024 Jason Smith. All rights reserved.</p>
+            <p>&copy; 2026 Jason Smith. All rights reserved.</p>
         </div>
     </footer>
     <script src="scripts/card-shuffle.js"></script>

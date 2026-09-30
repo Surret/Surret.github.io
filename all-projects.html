@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en-GB" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +7,22 @@
     <meta property="og:title" content="Jason Smith | Product Design">
     <meta property="og:description" content="Product designer and creator focused on 3D printing and the manufacturing process.">
     <meta property="og:url" content="https://surret.github.io/all-projects.html">
-    <meta property="og:image" content="https://surret.github.io/img/Site-images/social-banner.png">
+    <meta property="og:image" content="https://surret.github.io/img/Site-images/og-image.png">
     <meta property="og:type" content="webpage">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image"> 
     <meta name="twitter:title" content="Jason Smith | Product Design">
     <meta name="twitter:description" content="Product designer and creator focused on 3D printing and the manufacturing process.">
-    <meta name="twitter:image" content="https://surret.github.io/img/Site-images/social-banner.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://surret.github.io/img/Site-images/favicon.png">
-    <link rel="icon" type="image/png" sizes="32x33" href="https://surret.github.io/img/Site-images/favicon.png">
-    <link rel="shortcut icon" type="image/png" href="https://surret.github.io/img/Site-images/favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://surret.github.io/img/Site-images/favicon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="https://surret.github.io/img/Site-images/favicon.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="https://surret.github.io/img/Site-images/favicon.png"> 
+    <meta name="twitter:image" content="https://surret.github.io/img/Site-images/og-image.png">
+    
+    <!-- Site Favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="shortcut icon" type="image/png" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/Site-images/Surrettun-Station-Favicon-Logo.png?v=2"> 
 
     <title>All Projects | Jason Smith Product Design</title>
     <meta name="description" content="A complete list of product design projects by Jason Smith, including details on 3D modeling, 3D printing, and CAD design.">
@@ -32,14 +34,34 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            color: #1f2937;
+            background-color: #121212;
+            color: #f3f4f6;
         }
         .nav-link:hover {
-            color: #1e88e5;
+            color: #22d3ee;
         }
+        /* Fixed Background Watermark */
         .projects-bg {
-            background-color: #c0d9ec;
-            background-image: repeating-linear-gradient(45deg, #a7bed6 0, #a7bed6 1px, transparent 1px, transparent 10px);
+            background-color: #121212;
+            position: relative;
+            z-index: 1;
+        }
+        .projects-bg::before {
+            content: "";
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-image: url('img/Site-images/Surrettun-Station-Socials-Logo.png');
+            background-repeat: repeat;
+            background-size: 140px auto;
+            background-position: center;
+            transform: rotate(-25deg);
+            transform-origin: center center;
+            opacity: 0.15;
+            z-index: -1;
+            pointer-events: none;
         }
     </style>
 </head>
@@ -48,37 +70,38 @@
 <div id="navbar-placeholder"></div>
 
     <!-- All Projects Section -->
-    <section id="all-projects" class="py-20 projects-bg">
-        <div class="container mx-auto px-6 max-w-6xl bg-white rounded-lg shadow-lg p-8 md:p-12">
+    <section id="all-projects" class="py-12 md:py-20 projects-bg min-h-screen">
+        <div class="container mx-auto px-6 max-w-6xl bg-zinc-100 border border-zinc-300 rounded-2xl shadow-2xl p-8 md:p-12 text-zinc-800">
             <!-- Back to Portfolio Button -->
-            <a href="index.html" class="inline-flex items-center bg-blue-600 text-white font-semibold py-2 px-4 rounded-full hover:bg-blue-700 transition-colors duration-200 mb-8">
+            <a href="index.html" class="inline-flex items-center bg-slate-900 hover:bg-slate-800 text-cyan-400 font-semibold py-2 px-4 rounded-full transition-colors duration-200 mb-8 border border-slate-700 shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                 </svg>
                 Back to Portfolio
             </a>
 
-            <h1 class="text-4xl md:text-5xl font-bold text-center mb-8">All Projects</h1>
-            <p class="text-gray-600 text-center mb-12">A complete list of my product design work, detailing the challenges, solutions, and technologies used.</p>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-center mb-4 text-zinc-900">All Projects</h1>
+            <p class="text-zinc-600 text-center text-lg mb-12 max-w-2xl mx-auto">A complete list of my product design work, detailing the challenges, solutions, and technologies used.</p>
 
-            <div id="all-projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div id="all-projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
             </div>
         </div>
     </section>
 
     <!-- Floating "Back to Top" Button -->
-    <a href="#" id="back-to-top" class="fixed bottom-4 right-4 bg-gray-800 text-white p-3 rounded-full shadow-lg transition-opacity duration-300 opacity-0 z-50 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+    <a href="#" id="back-to-top" class="fixed bottom-4 right-4 bg-slate-800 text-cyan-400 border border-slate-700 p-3 rounded-full shadow-lg transition-opacity duration-300 opacity-0 z-50 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>
     </a>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8 text-center">
+    <footer class="bg-slate-950 text-slate-400 py-8 text-center border-t border-slate-800">
         <div class="container mx-auto px-6">
-            <p>&copy; 2024 Jason Smith. All rights reserved.</p>
+            <p>&copy; 2026 Jason Smith. All rights reserved.</p>
         </div>
     </footer>
+
     <script src="scripts/card-shuffle.js"></script>
     <script src="scripts/project-controller.js"></script>
     <script src="scripts/global-utilities.js"></script> 

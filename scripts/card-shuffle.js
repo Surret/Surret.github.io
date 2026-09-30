@@ -21,20 +21,44 @@ const projectData = [
         link: "engine-roof.html",
         tag: null
     },
-    {
+    /*{
         title: "NFC Keyring Concept",
         description: "A conceptual design for a custom keyring with an embedded NFC chip, exploring personal and medical applications.",
         imageSrc: "https://placehold.co/600x400/A0E7E5/ffffff?text=NFC+Concept+Drawing",
         altText: "Conceptual drawing of an NFC keyring",
         link: "nfc-keyring.html",
         tag: "Concept"
-    },
+    },*/
     {
         title: "Racking Hook",
         description: "A custom-designed hook to hold ear defenders on the company's rapid racking system when not in use.",
         imageSrc: "img/racking-hook/racking-hook2.jpg",
         altText: "Image of a hook for racking",
         link: "racking-hook.html",
+        tag: null
+    },
+    {
+        title: "Keep Alive Circuit",
+        description: "A custom-designed circuit to prevent power banks from shutting off due to low current draw.",
+        imageSrc: "img/keep-alive-circuit/powerbank-circuit4.jpg",
+        altText: "Image of the keep-alive circuit inside a custom enclosure",
+        link: "keep-alive-circuit.html",
+        tag: null
+    },
+    {
+        title: "PIR Control Module",
+        description: "A custom-designed module to control PIR (Passive Infrared) sensors for automated lighting applications.",
+        imageSrc: "img/pir-circuit/PIR_final.jpg",
+        altText: "Image of the PIR control module inside a parametric enclosure",
+        link: "pir-circuit.html",
+        tag: null
+    },
+    {
+        title: "Hybrid Bowl Carrier",
+        description: "A custom-designed hybrid carrier for transporting bowls and drinks while navigating gated partitions.",
+        imageSrc: "img/bowl-holder/Bowl_holder_final.jpg",
+        altText: "Image of the hybrid bowl carrier system",
+        link: "bowl-carrier.html",
         tag: null
     },
     // Future projects should be added here
@@ -76,48 +100,48 @@ function renderProjects(projects, containerId) {
     let htmlContent = '';
 
     projects.forEach(project => {
-        // Check if a tag exists and generate the tag HTML if it does
+        // Clean tag badge using subtle dark slate/cyan backdrop glassmorphism
         const tagHtml = project.tag 
             ? `
-                <div class="absolute top-2 right-2 bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-semibold shadow-md">
+                <div class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-md text-cyan-400 border border-slate-700 px-2.5 py-1 rounded-md text-xs font-semibold shadow-sm">
                     ${project.tag}
                 </div>
-              `
+            `
             : '';
 
-        // Build the HTML for a single card
+        // Build the updated HTML for a single card
         htmlContent += `
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 project-card h-full flex flex-col">
-                    <div class="relative">
-                        <img src="${project.imageSrc}" alt="${project.altText}" class="w-full h-48 object-cover">
-                        ${tagHtml}
+            <div class="group bg-white border border-zinc-200 rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 project-card h-full flex flex-col">
+                
+                <!-- Image Header with Hover Zoom -->
+                <div class="relative overflow-hidden bg-zinc-100 border-b border-zinc-200 h-48">
+                    <img src="${project.imageSrc}" alt="${project.altText}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out">
+                    ${tagHtml}
+                </div>
+                
+                <!-- Card Body -->
+                <div class="p-6 flex flex-col flex-1 justify-between">
+                    
+                    <div class="mb-6">
+                        <h3 class="font-bold text-xl text-zinc-900 mb-2 group-hover:text-cyan-600 transition-colors duration-200">${project.title}</h3>
+                        <p class="text-zinc-600 text-sm leading-relaxed">${project.description}</p>
                     </div>
                     
-                    <div class="p-6 flex flex-col flex-1">
-                        
-                        <!-- This wrapper ensures the content area grows to push the button down -->
-                        <div class="flex-1">
-                            <h3 class="font-bold text-xl mb-2">${project.title}</h3>
-                            <p class="text-gray-600 text-sm mb-4">${project.description}</p>
-                        </div>
-                        
-                        <!-- FIX: The A tag now has ALL the button styling and spans the full width of the card content -->
-                        <a href="${project.link}"
-                            class="w-full inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white no-underline 
-                                bg-blue-600 hover:bg-blue-700 rounded-full shadow-md 
-                                transition duration-150 ease-in-out 
-                                focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                            Learn More
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
-                        </a>
-                        
-                    </div>
+                    <!-- Action Link styled to match the dark slate / cyan theme -->
+                    <a href="${project.link}"
+                        class="w-full inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold text-cyan-400 no-underline 
+                            bg-slate-900 hover:bg-slate-800 rounded-lg border border-slate-700 shadow-sm 
+                            transition-colors duration-200 ease-in-out 
+                            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
+                        Learn More
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                    
                 </div>
-
+            </div>
         `;
-
     });
 
     // Insert the generated content into the container
