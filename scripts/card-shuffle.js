@@ -11,7 +11,8 @@ const projectData = [
         imageSrc: "img/Steam-Lamp/steam_lamp3.jpg",
         altText: "Image of a 3D-printed steam lamp",
         link: "steam-lamp.html",
-        tag: null
+        tag: null,
+        modules: ["module-01", "module-02"]
     },
     {
         title: "The Engine Roof Project",
@@ -19,7 +20,8 @@ const projectData = [
         imageSrc: "img/engine-roof/engine_roof4.jpg",
         altText: "Image of a CAD-modelled roof for the steam engine",
         link: "engine-roof.html",
-        tag: null
+        tag: null,
+        modules: ["module-01",]
     },
     /*{
         title: "NFC Keyring Concept",
@@ -35,7 +37,8 @@ const projectData = [
         imageSrc: "img/racking-hook/racking-hook2.jpg",
         altText: "Image of a hook for racking",
         link: "racking-hook.html",
-        tag: null
+        tag: null,
+        modules: ["module-01", "module-02"]
     },
     {
         title: "Keep Alive Circuit",
@@ -43,7 +46,8 @@ const projectData = [
         imageSrc: "img/keep-alive-circuit/powerbank-circuit4.jpg",
         altText: "Image of the keep-alive circuit inside a custom enclosure",
         link: "keep-alive-circuit.html",
-        tag: null
+        tag: null,
+        modules: ["module-01", "module-03"]
     },
     {
         title: "PIR Control Module",
@@ -51,7 +55,8 @@ const projectData = [
         imageSrc: "img/pir-circuit/PIR_final.jpg",
         altText: "Image of the PIR control module inside a parametric enclosure",
         link: "pir-circuit.html",
-        tag: null
+        tag: null,
+        modules: ["module-01", "module-03"]
     },
     {
         title: "Hybrid Bowl Carrier",
@@ -59,7 +64,8 @@ const projectData = [
         imageSrc: "img/bowl-holder/Bowl_holder_final.jpg",
         altText: "Image of the hybrid bowl carrier system",
         link: "bowl-carrier.html",
-        tag: null
+        tag: null,
+        modules: ["module-01", "module-02"]
     },
     // Future projects should be added here
 ];

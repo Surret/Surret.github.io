@@ -170,29 +170,22 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-bg py-20">
-        <div class="container mx-auto px-6 max-w-2xl text-center">
-            <!-- Added text-white so the title doesn't vanish into the #121212 background -->
-            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white">Get In Touch</h2>
-            
-            <!-- Updated text-gray-600 to text-gray-300 for dark theme legibility -->
-            <p class="text-gray-300 mb-8">
-                Have a project idea or a job opportunity? I'd love to hear from you.
-            </p>
-            
-            <!-- Swapped email to surrettun@gmail.com and removed w-full so button doesn't stretch full width -->
-            <a href="mailto:surrettun@gmail.com" class="inline-flex items-center justify-center bg-slate-900 hover:bg-slate-800 text-cyan-400 font-semibold py-3.5 px-8 rounded-xl border border-slate-700 shadow-md transition-all duration-300 hover:shadow-cyan-500/10 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-cyan-500">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                Send a Message
-            </a>
-            
-            <!-- Muted gray text adjusted for dark mode contrast -->
-            <p class="text-sm text-gray-400 mt-4">
-                This will open your default email client.
-            </p>
-        </div>
+    <section id="contact" class="contact-bg py-20 px-4 md:px-6 lg:px-8">
+        <div id="enquiry-form-container"></div>
+
+        <!-- Initialize form with custom home page text -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                if (typeof window.renderEnquiryForm === 'function') {
+                    window.renderEnquiryForm('enquiry-form-container', {
+                        title: 'Get In Touch',
+                        subtitle: "Have a project idea or a job opportunity? I'd love to hear from you.",
+                        showModules: false,
+                        buttonText: 'Send Message'
+                    });
+                }
+            });
+        </script>
     </section>
 
         <!-- Floating "Back to Top" Button -->
@@ -210,6 +203,7 @@
     </footer>
     
     <script src="scripts/card-shuffle.js"></script>
+    <script src="scripts/enquiry-form.js"></script>
     <script src="scripts/project-controller.js"></script>
     <script src="scripts/global-utilities.js"></script> 
 
