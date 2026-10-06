@@ -53,6 +53,9 @@ function loadNavbar(url, targetId) {
             // 1. Inject the HTML content
             targetElement.innerHTML = data;
             
+            // Initialise Share Modal (Separate Sandbox)
+            window.initShareModal?.();
+
             // 2. IMMEDIATE MOBILE MENU INITIALIZATION (Scoped to the injected container)
             
             // Use querySelector on the targetElement for elements *within* the injected content.
